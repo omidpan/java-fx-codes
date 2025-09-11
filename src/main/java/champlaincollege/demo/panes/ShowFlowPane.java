@@ -1,8 +1,7 @@
-package champlaincollege.demo;
+package champlaincollege.demo.panes;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;

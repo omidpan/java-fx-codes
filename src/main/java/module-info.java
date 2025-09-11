@@ -7,4 +7,6 @@ module champlaincollege.demo {
 
     opens champlaincollege.demo to javafx.fxml;
     exports champlaincollege.demo;
+    exports champlaincollege.demo.panes;
+    opens champlaincollege.demo.panes to javafx.fxml;
 }

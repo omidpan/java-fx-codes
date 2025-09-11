@@ -1,4 +1,4 @@
-package champlaincollege.demo;
+package champlaincollege.demo.panes;
 
 import javafx.application.Application;
 import javafx.geometry.HPos;

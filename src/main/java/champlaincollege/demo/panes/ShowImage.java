@@ -1,10 +1,7 @@
-package champlaincollege.demo;
+package champlaincollege.demo.panes;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.geometry.Insets;
 import javafx.stage.Stage;

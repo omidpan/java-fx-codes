@@ -1,12 +1,10 @@
-package champlaincollege.demo;
+package champlaincollege.demo.panes;
 
-import com.sun.source.tree.Tree;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
