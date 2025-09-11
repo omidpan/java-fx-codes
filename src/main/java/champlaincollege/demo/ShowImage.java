@@ -2,6 +2,8 @@ package champlaincollege.demo;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.geometry.Insets;
@@ -13,21 +15,21 @@ public class ShowImage extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
     // Create a pane to hold the image views
-    Pane pane = new HBox(10);
+    Pane pane = new Pane();
     pane.setPadding(new Insets(5, 5, 5, 5));
-//    System.out.println(getClass().getResource("/image/us.gif"));
-//    Image image = new Image("/image/us.gif");
+    System.out.println(getClass().getResource("/image/us.gif"));
+//    Image image = new Image("../..//image/us.gif");
     Image image = new Image(getClass().getResource("/image/us.gif").toExternalForm());
     pane.getChildren().add(new ImageView(image));
     
-    ImageView imageView2 = new ImageView(image);
-    imageView2.setFitHeight(100);
-    imageView2.setFitWidth(100);
-    pane.getChildren().add(imageView2);   
-
-    ImageView imageView3 = new ImageView(image);
-    imageView3.setRotate(90);
-    pane.getChildren().add(imageView3);     
+//    ImageView imageView2 = new ImageView(image);
+//    imageView2.setFitHeight(100);
+//    imageView2.setFitWidth(100);
+//    pane.getChildren().add(imageView2);
+//
+//    ImageView imageView3 = new ImageView(image);
+//    imageView3.setRotate(90);
+//    pane.getChildren().add(imageView3);
     
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane);

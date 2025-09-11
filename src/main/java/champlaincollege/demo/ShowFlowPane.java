@@ -2,6 +2,7 @@ package champlaincollege.demo;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -17,13 +18,16 @@ public class ShowFlowPane extends Application {
     pane.setHgap(5); // Set hGap to 5px
     pane.setVgap(5);
 
-    // Place nodes in the pane
-    pane.getChildren().addAll(new Label("First Name:"), 
-      new TextField(), new Label("MI:"));
+//    // Place nodes in the pane
+    pane.getChildren().addAll(new Label("First Name:"), new TextField());
+    //add label and text field with style
+    Label lb=new Label("Middle Name:");
+    lb.setStyle("-fx-text-fill: Blue;");
     TextField tfMi = new TextField();
-    tfMi.setPrefColumnCount(1);
-    pane.getChildren().addAll(tfMi, new Label("Last Name:"),
-      new TextField());
+    tfMi.setPrefColumnCount(10);
+    pane.getChildren().addAll(lb, tfMi);
+
+    pane.getChildren().addAll(new Label("Last Name:"), new TextField());
     
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane, 200, 250);
