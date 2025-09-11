@@ -16,7 +16,7 @@ public class ShowBorderPane extends Application {
     // Create a border pane 
     BorderPane pane = new BorderPane();
     //addNodes has runtime issue
-    addNodes(pane);
+//    addNodes(pane);
     //best practice
     addNodesWithCustomPane(pane);
 
