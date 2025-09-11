@@ -1,6 +1,8 @@
 module champlaincollege.demo {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jdk.compiler;
+    requires java.desktop;
 
 
     opens champlaincollege.demo to javafx.fxml;
