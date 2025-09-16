@@ -15,8 +15,8 @@ public class ShowRectangle extends Application {
     // Create rectangles 
     Rectangle r1 = new Rectangle(25, 10, 60, 30);
     r1.setStroke(Color.BLACK);
-    r1.setFill(Color.WHITE);    
-    Rectangle r2 = new Rectangle(25, 50, 60, 30);    
+    r1.setFill(Color.WHITE);
+    Rectangle r2 = new Rectangle(25, 50, 60, 30);
     Rectangle r3 = new Rectangle(25, 90, 60, 30);
     r3.setArcWidth(15);
     r3.setArcHeight(25);
@@ -25,8 +25,11 @@ public class ShowRectangle extends Application {
      */
     // Create a group and add nodes to the group
     Group group = new Group();
-    group.getChildren().addAll(new Text(10, 27, "r1"), r1, new Text(10, 67, "r2"),
-            r2, new Text(10, 107, "r3"), r3);
+    group.getChildren()
+            .addAll(new Text(10, 27, "r1"), r1,
+            new Text(10, 67, "r2"), r2,
+            new Text(10, 107, "r3"), r3
+    );
     /**
      * If you want to create more than node and add them to the group , it would be nice to have a method
      */
