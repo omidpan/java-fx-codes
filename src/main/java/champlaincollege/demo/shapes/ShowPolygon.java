@@ -67,9 +67,7 @@ class MyPolygon extends Pane {
     ObservableList<Double> list = polygon.getPoints();
     // Add points to the polygon list
     for (int i = 0; i < 6; i++) {
-      System.out.println("X["+i+"]="+centerX + radius * Math.cos(2 * i * Math.PI / 6));
       list.add(centerX + radius * Math.cos(2 * i * Math.PI / 6));
-      System.out.println("Y["+i+"]="+(centerY - radius * Math.sin(2 * i * Math.PI / 6)));
       list.add(centerY - radius * Math.sin(2 * i * Math.PI / 6));
     }
 
