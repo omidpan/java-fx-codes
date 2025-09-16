@@ -1,12 +1,13 @@
 package champlaincollege.demo.panes;
 
+
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
 import javafx.geometry.Insets;
-import javafx.stage.Stage;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class ShowImage extends Application {
   @Override // Override the start method in the Application class
@@ -19,14 +20,14 @@ public class ShowImage extends Application {
     Image image = new Image(getClass().getResource("/image/us.gif").toExternalForm());
     pane.getChildren().add(new ImageView(image));
     
-//    ImageView imageView2 = new ImageView(image);
-//    imageView2.setFitHeight(100);
-//    imageView2.setFitWidth(100);
-//    pane.getChildren().add(imageView2);
+    ImageView imageView2 = new ImageView(image);
+    imageView2.setFitHeight(100);
+    imageView2.setFitWidth(100);
+    pane.getChildren().add(imageView2);
 //
-//    ImageView imageView3 = new ImageView(image);
-//    imageView3.setRotate(90);
-//    pane.getChildren().add(imageView3);
+    ImageView imageView3 = new ImageView(image);
+    imageView3.setRotate(90);
+    pane.getChildren().add(imageView3);
     
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane);

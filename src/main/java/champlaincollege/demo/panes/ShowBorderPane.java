@@ -46,20 +46,20 @@ public class ShowBorderPane extends Application {
    */
   private void addNodesWithCustomPane(BorderPane pane) {
         // Place nodes in the pane
-    pane.setTop(new CustomPane("Top"));
-    pane.setRight(new CustomPane("Right"));
-    pane.setBottom(new CustomPane("Bottom"));
-    pane.setLeft(new CustomPane("Left"));
-    pane.setCenter(new CustomPane("Center"));
+    pane.setTop(new CustomPane("Top","red"));
+    pane.setRight(new CustomPane("Right","blue"));
+    pane.setBottom(new CustomPane("Bottom","green"));
+    pane.setLeft(new CustomPane("Left","yellow"));
+    pane.setCenter(new CustomPane("Center","black"));
   }
 
 
 }
 // Define a custom pane to hold a label in the center of the pane
 final class CustomPane extends StackPane {
-  public CustomPane(String title) {
+  public CustomPane(String title,String color) {
     getChildren().add(new Label(title));
-    setStyle("-fx-border-color: red");
+    setStyle("-fx-border-color: "+color+";");
     setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
   }
 }
