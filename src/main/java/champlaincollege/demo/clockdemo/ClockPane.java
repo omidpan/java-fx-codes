@@ -91,28 +91,25 @@ public class ClockPane extends Pane {
     
     // Draw second hand
     double sLength = clockRadius * 0.8;
-    double secondX = centerX + sLength * 
-      Math.sin(second * (2 * Math.PI / 60));
-    double secondY = centerY - sLength * 
-      Math.cos(second * (2 * Math.PI / 60));
+    double secondX = centerX + sLength * Math.sin(second * (2 * Math.PI / 60));
+    double secondY = centerY - sLength * Math.cos(second * (2 * Math.PI / 60));
     Line sLine = new Line(centerX, centerY, secondX, secondY);
     sLine.setStroke(Color.RED);
 
     // Draw minute hand
+    //The x-coordinate is: x = r * sin(θ)
+    //The y-coordinate is: y = r * cos(θ)
+    //2 * Math.PI / 60 → converts 1 minute into radians (since a full circle = 2π radians).
     double mLength = clockRadius * 0.65;
-    double xMinute = centerX + mLength * 
-      Math.sin(minute * (2 * Math.PI / 60));
-    double minuteY = centerY - mLength * 
-      Math.cos(minute * (2 * Math.PI / 60));
+    double xMinute = centerX + mLength * Math.sin(minute * (2 * Math.PI / 60));
+    double minuteY = centerY - mLength * Math.cos(minute * (2 * Math.PI / 60));
     Line mLine = new Line(centerX, centerY, xMinute, minuteY);
     mLine.setStroke(Color.BLUE);
     
     // Draw hour hand
     double hLength = clockRadius * 0.5;
-    double hourX = centerX + hLength * 
-      Math.sin((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
-    double hourY = centerY - hLength *
-      Math.cos((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
+    double hourX = centerX + hLength * Math.sin((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
+    double hourY = centerY - hLength * Math.cos((hour % 12 + minute / 60.0) * (2 * Math.PI / 12));
     Line hLine = new Line(centerX, centerY, hourX, hourY);
     hLine.setStroke(Color.GREEN);
     

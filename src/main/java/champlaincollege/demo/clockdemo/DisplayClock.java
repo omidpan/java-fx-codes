@@ -19,10 +19,10 @@ public class DisplayClock extends Application {
     BorderPane pane = new BorderPane();
     pane.setCenter(clock);
     pane.setBottom(lblCurrentTime);
-    BorderPane.setAlignment(lblCurrentTime, Pos.TOP_CENTER);
+    BorderPane.setAlignment(lblCurrentTime, Pos.BOTTOM_CENTER);
 
     // Create a scene and place it in the stage
-    Scene scene = new Scene(pane, 250, 250);
+    Scene scene = new Scene(pane, 350, 350);
     primaryStage.setTitle("DisplayClock"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
