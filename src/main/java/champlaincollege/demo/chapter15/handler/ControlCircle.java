@@ -29,6 +29,8 @@ public class ControlCircle extends Application {
     // Create and register the handler
     btEnlarge.setOnAction(new EnlargeHandler());
 
+    btShrink.setOnAction(new ShrinkHandler());
+
     BorderPane borderPane = new BorderPane();
     borderPane.setCenter(circlePane);
     borderPane.setBottom(hBox);
@@ -45,6 +47,12 @@ public class ControlCircle extends Application {
     @Override // Override the handle method
     public void handle(ActionEvent e) {
       circlePane.enlarge();
+    }
+  }
+  class ShrinkHandler implements EventHandler<ActionEvent> {
+    @Override // Override the handle method
+    public void handle(ActionEvent e) {
+      circlePane.shrink();
     }
   }
   
@@ -71,7 +79,6 @@ class CirclePane extends StackPane {
   }
   
   public void shrink() {
-    circle.setRadius(circle.getRadius() > 2 ? 
-      circle.getRadius() - 2 : circle.getRadius());
+    circle.setRadius(circle.getRadius() > 2 ? circle.getRadius() - 2 : circle.getRadius());
   }
 }
