@@ -6,9 +6,9 @@ import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
@@ -26,9 +26,8 @@ public class ControlCircle extends Application {
     Button btShrink = new Button("Shrink");
     hBox.getChildren().add(btEnlarge);
     hBox.getChildren().add(btShrink);
-    EnlargeHandler enlargeHandler = new EnlargeHandler();
     // Create and register the handler
-    btEnlarge.setOnAction(enlargeHandler);
+    btEnlarge.setOnAction(new EnlargeHandler());
 
     BorderPane borderPane = new BorderPane();
     borderPane.setCenter(circlePane);
