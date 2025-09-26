@@ -41,8 +41,7 @@ public class AnonymousHandlerDemo extends Application {
     btDown.setOnAction(new EventHandler<ActionEvent>() {
       @Override // Override the handle method
       public void handle(ActionEvent e) {
-        text.setY(text.getY() < pane.getHeight() ? 
-          text.getY() + 5 : pane.getHeight());
+        text.setY(text.getY() < pane.getHeight() ? text.getY() + 5 : pane.getHeight());
       }
     });
     

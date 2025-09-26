@@ -1,6 +1,6 @@
 package champlaincollege.demo.chapter15.innerclass;
 
-public class StaticInnerDemo {
+public class OuterClassWithStaticInnerDemo {
 
     // Static nested class
     static class StaticInner {
@@ -11,7 +11,7 @@ public class StaticInnerDemo {
 
     public static void main(String[] args) {
         // Create static inner class directly (no outer object needed)
-        StaticInnerDemo.StaticInner inner = new StaticInnerDemo.StaticInner();
+        OuterClassWithStaticInnerDemo.StaticInner inner = new OuterClassWithStaticInnerDemo.StaticInner();
         inner.display();
     }
 }
