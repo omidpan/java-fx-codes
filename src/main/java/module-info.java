@@ -15,4 +15,5 @@ module champlaincollege.demo {
     opens champlaincollege.demo.clockdemo to javafx.fxml;
     exports champlaincollege.demo.chapter15.load;
     exports champlaincollege.demo.chapter15.handler;
+    exports champlaincollege.demo.chapter15.mouseandkeyboard;
 }
