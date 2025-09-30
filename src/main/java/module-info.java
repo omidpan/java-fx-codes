@@ -17,4 +17,5 @@ module champlaincollege.demo {
     exports champlaincollege.demo.chapter15.handler;
     exports champlaincollege.demo.chapter15.mouseandkeyboard;
     exports champlaincollege.demo.chapter15.observablelistener;
+    exports champlaincollege.demo.chapter15.animation;
 }
