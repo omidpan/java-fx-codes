@@ -1,5 +1,6 @@
 package champlaincollege.demo.chapter16;
 
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
@@ -26,27 +27,26 @@ public class RadioButtonDemo extends CheckBoxDemo {
     rbRed.setToggleGroup(group);
     rbGreen.setToggleGroup(group);
     rbBlue.setToggleGroup(group);
-    
-    rbRed.setOnAction(e -> {
+    EventHandler  handler =e->{
       if (rbRed.isSelected()) {
         text.setFill(Color.RED);
       }
-    });
-    
-    rbGreen.setOnAction(e -> {
-      if (rbGreen.isSelected()) {
+      else if (rbGreen.isSelected()) {
         text.setFill(Color.GREEN);
       }
-    });
-
-    rbBlue.setOnAction(e -> {
-      if (rbBlue.isSelected()) {
+      else if (rbBlue.isSelected()) {
         text.setFill(Color.BLUE);
       }
-    });
+    };
+    rbRed.setOnAction(handler);
+    
+    rbGreen.setOnAction(handler);
+
+    rbBlue.setOnAction(handler);
     
     return pane;
   }
+
 
   /**
    * The main method is only needed for the IDE with limited

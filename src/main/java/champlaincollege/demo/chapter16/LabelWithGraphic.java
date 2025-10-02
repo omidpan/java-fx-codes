@@ -1,5 +1,6 @@
 package champlaincollege.demo.chapter16;
 
+import champlaincollege.demo.Utility;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -19,8 +20,8 @@ import java.net.URL;
 public class LabelWithGraphic extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
-    URL imgURL = getClass().getResource("/image/usflag.png");
-    ImageView us = new ImageView(imgURL.toString());
+
+    ImageView us = new ImageView(Utility.getResource("usflag.png",LabelWithGraphic.class));
     Label lb1 = new Label("US\n50 States", us);
     lb1.setStyle("-fx-border-color: green; -fx-border-width: 2");
     lb1.setContentDisplay(ContentDisplay.BOTTOM);
