@@ -1,15 +1,10 @@
-package champlaincollege.demo;
+package champlaincollege.demo.chapter14;
 
 import javafx.application.Application;
-import javafx.beans.Observable;
-import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.scene.layout.StackPane;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class NodeStyleRotateDemo extends Application {
   @Override // Override the start method in the Application class

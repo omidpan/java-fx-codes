@@ -4,13 +4,10 @@ module champlaincollege.demo {
     requires jdk.compiler;
     requires javafx.graphics;
 
-
-    opens champlaincollege.demo to javafx.fxml;
-    exports champlaincollege.demo;
-    exports champlaincollege.demo.panes;
-    opens champlaincollege.demo.panes to javafx.fxml;
-    exports champlaincollege.demo.shapes;
-    opens champlaincollege.demo.shapes to javafx.fxml;
+    exports champlaincollege.demo.chapter14.panes;
+    opens champlaincollege.demo.chapter14.panes to javafx.fxml;
+    exports champlaincollege.demo.chapter14.shapes;
+    opens champlaincollege.demo.chapter14.shapes to javafx.fxml;
     exports champlaincollege.demo.clockdemo;
     opens champlaincollege.demo.clockdemo to javafx.fxml;
     exports champlaincollege.demo.chapter15.load;
@@ -18,4 +15,7 @@ module champlaincollege.demo {
     exports champlaincollege.demo.chapter15.mouseandkeyboard;
     exports champlaincollege.demo.chapter15.observablelistener;
     exports champlaincollege.demo.chapter15.animation;
+    exports champlaincollege.demo.chapter16;
+    exports champlaincollege.demo.chapter14;
+    opens champlaincollege.demo.chapter14 to javafx.fxml;
 }

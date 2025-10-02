@@ -1,4 +1,4 @@
-package champlaincollege.demo.shapes;
+package champlaincollege.demo.chapter14.shapes;
 
 import javafx.application.Application;
 import javafx.scene.Group;// used to Group nodes

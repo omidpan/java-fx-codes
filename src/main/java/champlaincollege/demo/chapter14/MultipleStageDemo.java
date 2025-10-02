@@ -1,4 +1,4 @@
-package champlaincollege.demo;
+package champlaincollege.demo.chapter14;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
