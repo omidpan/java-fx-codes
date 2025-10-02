@@ -27,7 +27,7 @@ public class CheckBoxDemo extends ButtonDemo {
     
     VBox paneForCheckBoxes = new VBox(25);
     paneForCheckBoxes.setPadding(new Insets(5, 5, 5, 5));
-    paneForCheckBoxes.setStyle("-fx-border-color: green;-fx-border-insets: 10;");// -fx-border-inserts can get a number or  set of numbers to add padding style.
+    paneForCheckBoxes.setStyle("-fx-border-color: green;-fx-border-insets: 10;-fx-border-style: solid;-fx-border-width: 2px");// -fx-border-inserts can get a number or  set of numbers to add padding style.
     CheckBox chkBold = new CheckBox("Bold");
     CheckBox chkItalic = new CheckBox("Italic");
     paneForCheckBoxes.getChildren().addAll(chkBold, chkItalic);
