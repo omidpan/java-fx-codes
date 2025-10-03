@@ -1,12 +1,11 @@
 package champlaincollege.demo.chapter16;
 
-import champlaincollege.demo.Utility;
+import champlaincollege.demo.utility.Utility;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -14,8 +13,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Ellipse;
-
-import java.net.URL;
 
 public class LabelWithGraphic extends Application {
   @Override // Override the start method in the Application class

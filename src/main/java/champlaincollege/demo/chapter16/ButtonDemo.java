@@ -1,6 +1,6 @@
 package champlaincollege.demo.chapter16;
 
-import champlaincollege.demo.Utility;
+import champlaincollege.demo.utility.Utility;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.geometry.Pos;
