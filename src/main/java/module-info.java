@@ -18,4 +18,5 @@ module champlaincollege.demo {
     exports champlaincollege.demo.chapter16;
     exports champlaincollege.demo.chapter14;
     opens champlaincollege.demo.chapter14 to javafx.fxml;
+    exports champlaincollege.demo.chapter16.casestudy;
 }
