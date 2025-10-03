@@ -1,8 +1,7 @@
 package champlaincollege.demo.utility;
 
 public enum Country {
-    CANADA( "CANADA",
-            "The Canadian national flag features a red maple leaf centered between two red vertical bands on a white field.","flags/ca.png"),
+    CANADA( "CANADA", "The China national flag ...","flags/ca.png"),
     CHINA("CHINA", "The China national flag ...",  "flags/china.png"),
     DENMARK( "DENMARK", "The Denmark national flag ...",  "flags/denmark.png"),
     FRANCE("FRANCE", "The France national flag ...",  "flags/france.png"),

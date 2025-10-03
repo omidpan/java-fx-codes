@@ -22,6 +22,7 @@ public class SliderDemo extends Application {
     sbHorizontal.setShowTickMarks(true);
     sbHorizontal.setShowTickLabels(true);
     sbHorizontal.setMajorTickUnit(25);
+    //vertical
     Slider sbVertical = new Slider();
     sbVertical.setOrientation(Orientation.VERTICAL);
     sbVertical.setMin(0);
