@@ -3,6 +3,7 @@ module champlaincollege.demo {
     requires javafx.fxml;
     requires jdk.compiler;
     requires javafx.graphics;
+    requires javafx.media;
 
     exports champlaincollege.demo.chapter14.panes;
     opens champlaincollege.demo.chapter14.panes to javafx.fxml;
@@ -19,4 +20,5 @@ module champlaincollege.demo {
     exports champlaincollege.demo.chapter14;
     opens champlaincollege.demo.chapter14 to javafx.fxml;
     exports champlaincollege.demo.chapter16.casestudy;
+    exports champlaincollege.demo.chapter16.media;
 }
