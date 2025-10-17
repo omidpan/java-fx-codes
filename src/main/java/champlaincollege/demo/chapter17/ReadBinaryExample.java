@@ -1,6 +1,7 @@
 package champlaincollege.demo.chapter17;
 
 import java.io.ByteArrayInputStream;
+import java.io.DataOutputStream;
 import java.io.InputStream;
 
 public class ReadBinaryExample {
