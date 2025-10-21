@@ -39,3 +39,4 @@ build/
 /.mvn/
 /.idea/
 /src/main/java/champlaincollege/demo/exams/
+/test.dat
