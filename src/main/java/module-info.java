@@ -22,8 +22,9 @@ module champlaincollege.demo {
     exports champlaincollege.demo.chapter16.casestudy;
     exports champlaincollege.demo.chapter16.media;
     exports champlaincollege.demo.chapter31;
+    exports champlaincollege.demo.chapter31.menu;
+    exports champlaincollege.demo.chapter31.panes;
     exports champlaincollege.demo.exams.q1;
     exports champlaincollege.demo.exams.q2;
 
-    exports champlaincollege.demo.exams.lab7_1;
 }
