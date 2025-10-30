@@ -11,7 +11,6 @@ public class TranslationDemo extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {   
     Pane pane = new Pane();
-
     double x = 10; 
     double y = 10;
     java.util.Random random = new java.util.Random();
@@ -21,7 +20,7 @@ public class TranslationDemo extends Application {
       rectangle.setStroke(Color.color(random.nextDouble(), random.nextDouble(), random.nextDouble()));
       rectangle.setTranslateX(x += 20);
       rectangle.setTranslateY(y += 5);
-      rectangle.setTranslateZ(random.nextDouble());
+//      rectangle.setTranslateZ(random.nextDouble());
       pane.getChildren().add(rectangle);
     }
 

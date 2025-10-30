@@ -11,9 +11,10 @@ import javafx.scene.shape.*;
 public class StrokeDemo extends Application {
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
-    //No StrokeType and MITER join
+
     Rectangle rectangle0 = new Rectangle(20, 20, 70, 120);
     rectangle0.setFill(Color.BLACK);
+//No StrokeType and MITER join
     Rectangle rectangle1 = new Rectangle(20, 20, 70, 120);
     rectangle1.setFill(Color.BLACK);
     rectangle1.setStrokeWidth(10);
@@ -41,7 +42,7 @@ public class StrokeDemo extends Application {
     // Line StrokeLineCap.BUTT
     Line line1 = new Line(20, 200, 150, 200);
     line1.setStrokeLineCap(StrokeLineCap.BUTT);
-    line1.setStrokeWidth(20);
+    line1.setStrokeWidth(50);
 
     // Line StrokeLineCap.ROUND
     Line line2 = new Line(20, 250, 150, 250);
@@ -51,7 +52,7 @@ public class StrokeDemo extends Application {
     // Line StrokeLineCap.SQUARE
     Line line3 = new Line(20, 300, 150, 300);
     line3.setStrokeLineCap(StrokeLineCap.SQUARE);
-    line3.setStrokeWidth(20);
+    line3.setStrokeWidth(50);
 
     // Line with Dash pattern
     Line line4 = new Line(460, 20, 560, 120);

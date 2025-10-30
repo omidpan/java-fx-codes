@@ -15,14 +15,14 @@ public class ScaleDemo extends Application {
 
     // Draw x-axis
     Line line1 = new Line(10, 100, 420, 100);
-    Line line2 = new Line(420, 100, 400, 90);
     //small forward angle
+    Line line2 = new Line(420, 100, 400, 90);
     Line line3 = new Line(420, 100, 400, 110);
 
     // Draw y-axis
     Line line4 = new Line(200, 10, 200, 200);
-    Line line5 = new Line(200, 10, 190, 30);
     //small UP angle
+    Line line5 = new Line(200, 10, 190, 30);
     Line line6 = new Line(200, 10, 210, 30);
 
     // Draw x, y axis labels
