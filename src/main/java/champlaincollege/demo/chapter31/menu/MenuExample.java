@@ -23,6 +23,8 @@ public class MenuExample extends Application {
         MenuItem openItem = new MenuItem("Open");
         MenuItem printItem = new MenuItem("Print");
         MenuItem exitItem = new MenuItem("Exit");
+        //add MenuItems to helpMenu
+        fileMenu.getItems().addAll(newItem, openItem, printItem, exitItem);
         MenuItem softwareItem = new MenuItem("Software");
         MenuItem hardwareItem = new MenuItem("Hardware");
         MenuItem macOSItem = new MenuItem("Mac OS");
