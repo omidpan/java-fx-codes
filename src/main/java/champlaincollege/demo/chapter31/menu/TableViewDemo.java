@@ -32,23 +32,17 @@ public class TableViewDemo extends Application {
 
     TableColumn capitalColumn = new TableColumn("Capital");
     capitalColumn.setMinWidth(100);
-    capitalColumn.setCellValueFactory(
-      new PropertyValueFactory<Country, String>("capital"));
+    capitalColumn.setCellValueFactory(new PropertyValueFactory<Country, String>("capital"));
 
-    TableColumn populationColumn = 
-      new TableColumn("Population (million)");
+    TableColumn populationColumn = new TableColumn("Population (million)");
     populationColumn.setMinWidth(200);
-    populationColumn.setCellValueFactory(
-      new PropertyValueFactory<Country, Double>("population"));
+    populationColumn.setCellValueFactory(new PropertyValueFactory<Country, Double>("population"));
 
-    TableColumn democraticColumn = 
-      new TableColumn("Is Democratic?");
+    TableColumn democraticColumn = new TableColumn("Is Democratic?");
     democraticColumn.setMinWidth(200);
-    democraticColumn.setCellValueFactory(
-      new PropertyValueFactory<Country, Boolean>("democratic"));
+    democraticColumn.setCellValueFactory(new PropertyValueFactory<Country, Boolean>("democratic"));
 
-    tableView.getColumns().addAll(countryColumn, capitalColumn,
-      populationColumn, democraticColumn);
+    tableView.getColumns().addAll(countryColumn, capitalColumn, populationColumn, democraticColumn);
 
     Pane pane = new Pane();
     pane.getChildren().add(tableView);

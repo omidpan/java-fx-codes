@@ -22,9 +22,8 @@ public class TabPaneDemo extends Application {
     TabPane tabPane = new TabPane();
     Tab tab1 = new Tab("Line");
     tab1.setTooltip(new Tooltip("draw line"));
-    StackPane pane1 = new StackPane();
-    pane1.getChildren().add(new Line(10, 10, 80, 80));
-    tab1.setContent(pane1);
+
+
     Tab tab2 = new Tab("Rectangle");
     tab2.setContent(new Rectangle(10, 10, 200, 200));
     Tab tab3 = new Tab("Circle");
@@ -39,6 +38,9 @@ public class TabPaneDemo extends Application {
     closeItem.setOnAction(e -> System.out.println("Tab closed"));
 
     menu.getItems().add(closeItem);
+    StackPane pane1 = new StackPane();
+    pane1.getChildren().add(new Line(10, 10, 80, 80));
+    tab1.setContent(pane1);
     tabPane.setContextMenu(menu);
     tab1.setGraphic(new ImageView(Utility.getResourceByName("/image/new.png",this.getClass())));
     Scene scene = new Scene(tabPane, 300, 250);
