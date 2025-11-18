@@ -1,8 +1,6 @@
 package champlaincollege.demo.chapter32.casestudy;
-
 import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
-
 public class ConsumerAndProducerCaseStudy {
   private static Buffer buffer = new Buffer();
 
@@ -51,7 +49,8 @@ public class ConsumerAndProducerCaseStudy {
   // An inner class for buffer
   private static class Buffer {
     private static final int CAPACITY = 1; // buffer size
-    private java.util.LinkedList<Integer> queue = new java.util.LinkedList<>();
+    private java.util.LinkedList<Integer> queue =
+            new java.util.LinkedList<>();
 
     // Create a new lock
     private static Lock lock = new ReentrantLock();
