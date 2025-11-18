@@ -24,7 +24,7 @@ module champlaincollege.demo {
     exports champlaincollege.demo.chapter31;
     exports champlaincollege.demo.chapter31.menu;
     exports champlaincollege.demo.chapter31.panes;
-    exports champlaincollege.demo.chapter32.runableInterface;
+    exports champlaincollege.demo.chapter32;
 //    exports champlaincollege.demo.chapter32.threadconditions;
 //    exports champlaincollege.demo.chapter32.casestudy
     exports champlaincollege.demo.exams.q1;
