@@ -1,9 +1,9 @@
 package champlaincollege.demo.chapter32.sync;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
+import java.util.concurrent.locks.*;
 
-public class AccountWithSyncMethod {
+public class AccountWithSyncUsingLock {
   private static Account account = new Account();
 
   public static void main(String[] args) {
@@ -20,37 +20,42 @@ public class AccountWithSyncMethod {
     while (!executor.isTerminated()) {
     }
 
-    System.out.println("What is balance? " + account.getBalance());
+    System.out.println("What is balance ? " + account.getBalance());
   }
 
   // A thread for adding a penny to the account
-  private static class AddAPennyTask implements Runnable {
+  public static class AddAPennyTask implements Runnable {
     public void run() {
       account.deposit(1);
     }
   }
 
   // An inner class for account
-  private static class Account {
+  public static class Account {
+    private static Lock lock = new ReentrantLock(); // Create a lock
     private int balance = 0;
 
     public int getBalance() {
       return balance;
     }
-    /**
-     * thread safe with synchronized method
-     * @param amount
-     */
-    public synchronized void  deposit(int amount) {
-      int newBalance = balance + amount;
-//       This delay is deliberately added to magnify the
-//       data-corruption problem and make it easy to see.
+
+    public void deposit(int amount) {
+      lock.lock(); // Acquire the lock
+
       try {
-        Thread.sleep(1);
+        int newBalance = balance + amount;
+
+        // This delay is deliberately added to magnify the
+        // data-corruption problem and make it easy to see.
+        Thread.sleep(5);
+
+        balance = newBalance;
       }
       catch (InterruptedException ex) {
       }
-      balance = newBalance;
+      finally {
+        lock.unlock(); // Release the lock
+      }
     }
   }
 }

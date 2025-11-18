@@ -3,7 +3,7 @@ package champlaincollege.demo.chapter32.sync;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class AccountWithSyncMethod {
+public class AccountWithSyncStatement {
   private static Account account = new Account();
 
   public static void main(String[] args) {
@@ -37,20 +37,22 @@ public class AccountWithSyncMethod {
     public int getBalance() {
       return balance;
     }
-    /**
-     * thread safe with synchronized method
-     * @param amount
-     */
-    public synchronized void  deposit(int amount) {
-      int newBalance = balance + amount;
-//       This delay is deliberately added to magnify the
-//       data-corruption problem and make it easy to see.
-      try {
-        Thread.sleep(1);
+
+      /**
+       * thread safe with synchronized method
+       *
+       * @param amount
+       */
+    public void deposit(int amount) {
+      //sync statement
+      synchronized (this) {
+        int newBalance = balance + amount;
+        try {
+          Thread.sleep(1);
+        } catch (InterruptedException ex) {
+        }
+        balance = newBalance;
       }
-      catch (InterruptedException ex) {
-      }
-      balance = newBalance;
     }
   }
 }
