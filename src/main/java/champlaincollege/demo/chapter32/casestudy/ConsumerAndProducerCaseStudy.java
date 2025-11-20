@@ -21,7 +21,7 @@ public class ConsumerAndProducerCaseStudy {
           System.out.println("Producer writes " + i);
           buffer.write(i++); // Add a value to the buffer
           // Put the thread into sleep
-          Thread.sleep((int)(Math.random() * 10000));
+          Thread.sleep((int)(Math.random() * 10));
         }
       } 
       catch (InterruptedException ex) {
@@ -37,7 +37,7 @@ public class ConsumerAndProducerCaseStudy {
         while (true) {
           System.out.println("\t\t\tConsumer reads " + buffer.read());
           // Put the thread into sleep
-          Thread.sleep((int)(Math.random() * 10000));
+          Thread.sleep((int)(Math.random() * 10));
         }
       } 
       catch (InterruptedException ex) {
@@ -48,7 +48,7 @@ public class ConsumerAndProducerCaseStudy {
 
   // An inner class for buffer
   private static class Buffer {
-    private static final int CAPACITY = 1; // buffer size
+    private static final int CAPACITY = 100; // buffer size
     private java.util.LinkedList<Integer> queue =
             new java.util.LinkedList<>();
 

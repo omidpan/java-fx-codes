@@ -1,4 +1,4 @@
-package champlaincollege.demo.chapter32.sync;
+package champlaincollege.demo.chapter32.threadconditions;
 
 import java.util.concurrent.*;
 import java.util.concurrent.locks.*;

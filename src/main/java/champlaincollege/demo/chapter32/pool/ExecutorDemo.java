@@ -23,7 +23,7 @@ public class ExecutorDemo {
     executor2.execute(new PrintNum(10));
     // Shut down the executor
     executor.shutdown();
-
+//    System.out.println("is shutdown: "+executor.isShutdown());
 
     executor2.shutdown();
   }

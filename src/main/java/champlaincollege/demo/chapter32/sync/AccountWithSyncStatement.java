@@ -43,7 +43,7 @@ public class AccountWithSyncStatement {
        *
        * @param amount
        */
-    public void deposit(int amount) {
+    public  void  deposit(int amount) {
       //sync statement
       synchronized (this) {
         int newBalance = balance + amount;
