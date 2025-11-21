@@ -11,7 +11,12 @@ public class DeadlockDemo {
             synchronized (object1) {
                 System.out.println("Thread 1: Locked object1");
 
-                try { Thread.sleep(200); } catch (InterruptedException e) {}
+                try {
+                    Thread.sleep(200);
+                }
+                catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
                 synchronized (object2) {
                     System.out.println("Thread 1: Locked object2");

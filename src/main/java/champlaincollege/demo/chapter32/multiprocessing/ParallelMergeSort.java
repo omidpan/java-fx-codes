@@ -16,8 +16,7 @@ public class ParallelMergeSort {
     parallelMergeSort(list1); // Invoke parallel merge sort
     long endTime = System.currentTimeMillis();
     System.out.println("\nParallel time with "
-      + Runtime.getRuntime().availableProcessors() +
-      " processors is " + (endTime - startTime) + " milliseconds");
+      + Runtime.getRuntime().availableProcessors() + " processors is " + (endTime - startTime) + " milliseconds");
 
     startTime = System.currentTimeMillis();
     MergeSort.mergeSort(list2); // MergeSort is in Listing 24.5
@@ -56,8 +55,7 @@ public class ParallelMergeSort {
           secondHalf, 0, secondHalfLength);
 
         // Recursively sort the two halves
-        invokeAll(new SortTask(firstHalf),
-          new SortTask(secondHalf));
+        invokeAll(new SortTask(firstHalf), new SortTask(secondHalf));
 
         // Merge firstHalf with secondHalf into list
         MergeSort.merge(firstHalf, secondHalf, list);
